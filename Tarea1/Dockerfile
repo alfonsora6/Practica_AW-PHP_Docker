@@ -1,5 +1,5 @@
 FROM debian:bullseye
-MAINTAINER Alfonso Roldán <megaalfonso84@gmail.com>
+MAINTAINER Alfonso Roldán megaalfonso84@gmail.com"
 RUN apt update && apt upgrade -y && apt install apache2 libapache2-mod-php php php-mysql mariadb-client -y && apt clean && rm -rf /var/lib/apt/lists/*
 ADD bookmedik /var/www/html/
 ADD script.sh /opt/
