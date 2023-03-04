@@ -1,20 +1,20 @@
 version: '3.1'
 services:
   bookmedik:
-    container_name: bookmedik-app
+    container_name: contenedor_bookmedik
     image: alfonsora6/bookmedik:v1
     restart: always
     environment:
       USER_BOOKMEDIK: admin
       PASS_BOOKMEDIK: admin
-      DATABASE_HOST: bd_mariadb
+      DATABASE_HOST: contenedor_mariadb
       NOMBRE_DB: bookmedik
     ports:
-      - 8081:80
+      - 8086:80
     depends_on:
       - db
   db:
-    container_name: bd_mariadb
+    container_name: contenedor_mariadb
     image: mariadb
     restart: always
     environment:
